@@ -1,5 +1,4 @@
 # Generator-foxx
-[![Build Status](https://secure.travis-ci.org/thomaskarlrichter/generator-foxx.png?branch=master)](https://travis-ci.org/thomaskarlrichter/generator-foxx)
 
 A generator for Foxx applications based on Yeoman.
 
