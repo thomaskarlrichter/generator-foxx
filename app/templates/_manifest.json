@@ -6,21 +6,5 @@
 
     "apps": {
         "/": "app.js"
-    },
-
-    "lib": "lib",
-
-    "files": {
-       "/images": "images"
-    },
-
-    "assets": {
-       "application.js": {
-           "files": [
-               "assets/javascripts/*"
-           ]
-       }
-    },
-    "setup": "scripts/setup.js",
-    "teardown": "scripts/teardown.js"
+    }
 }
