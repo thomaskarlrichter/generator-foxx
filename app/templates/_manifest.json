@@ -5,7 +5,7 @@
     "thumnail": "images/logo.png",
 
     "apps": {
-        "/shop": "apps/app.js"
+        "/": "app.js"
     },
 
     "lib": "lib",
@@ -17,7 +17,6 @@
     "assets": {
        "application.js": {
            "files": [
-               "vendor/jquery.js",
                "assets/javascripts/*"
            ]
        }

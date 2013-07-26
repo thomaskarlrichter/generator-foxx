@@ -37,17 +37,11 @@ FoxxGenerator.prototype.askFor = function askFor() {
 FoxxGenerator.prototype.app = function app() {
   this.mkdir('scripts');
   this.mkdir('files');
-  this.mkdir('images');
+  this.mkdir('assets/javascript');
 
   this.copy('app.js', 'app.js');
   this.copy('setup.js', 'scripts/setup.js');
   this.copy('teardown.js', 'scripts/teardown.js');
   this.copy('_manifest.json', 'manifest.json');
   this.copy('thumbnail.png', 'images/thumbnail.png');
-  this.copy('_bower.json', 'bower.json');
-};
-
-FoxxGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
 };
