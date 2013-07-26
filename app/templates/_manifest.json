@@ -1,0 +1,27 @@
+{
+    "name": "<%= foxxName %>",
+    "version": "0.0.0",
+    "description": "",
+    "thumnail": "images/logo.png",
+
+    "apps": {
+        "/shop": "apps/app.js"
+    },
+
+    "lib": "lib",
+
+    "files": {
+       "/images": "images"
+    },
+
+    "assets": {
+       "application.js": {
+           "files": [
+               "vendor/jquery.js",
+               "assets/javascripts/*"
+           ]
+       }
+    },
+    "setup": "scripts/setup.js",
+    "teardown": "scripts/teardown.js"
+}
