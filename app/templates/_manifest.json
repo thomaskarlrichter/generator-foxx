@@ -2,7 +2,7 @@
     "name": "<%= foxxName %>",
     "version": "0.0.0",
     "description": "",
-    "thumnail": "images/logo.png",
+    "thumbnail": "images/thumbnail.png",
 
     "apps": {
         "/": "app.js"
