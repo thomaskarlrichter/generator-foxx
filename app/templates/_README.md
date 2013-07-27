@@ -1,0 +1,4 @@
+# <%= foxxName %> README
+
+TODO
+

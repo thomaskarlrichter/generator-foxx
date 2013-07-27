@@ -19,8 +19,9 @@ util.inherits(FoxxGenerator, yeoman.generators.Base);
 FoxxGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
-  // have Yeoman greet the user.
-  console.log(this.readFileAsString(path.join(__dirname, 'foxx.logo')));
+  // have Foxx greet the user.
+  console.log('\n' + this.readFileAsString(path.join(__dirname, 'foxx.logo')).green);
+  console.log('Welcome to Foxx Generator'.red + ' - ' + 'ladies and gentlemen!'.cyan);
 
   var prompts = [{
     name: 'foxxName',
@@ -43,5 +44,6 @@ FoxxGenerator.prototype.app = function app() {
   this.copy('setup.js', 'scripts/setup.js');
   this.copy('teardown.js', 'scripts/teardown.js');
   this.copy('_manifest.json', 'manifest.json');
+  this.copy('_README.md', 'README.md');
   this.copy('thumbnail.png', 'images/thumbnail.png');
 };
