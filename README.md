@@ -10,7 +10,7 @@ A generator for Foxx applications based on Yeoman.
 
 ## Foxx
 
-Foxx is a lightweight Javascript “micro framework” which
+[Foxx](http://foxx.arangodb.org) is a lightweight Javascript “micro framework” which
 allows you to build applications directly on top of [ArangoDB]
 (http://www.arangodb.org) and
 therefore skip the middleman (Rails, Django, Symfony or whatever your
