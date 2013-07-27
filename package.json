@@ -1,9 +1,12 @@
 {
   "name": "generator-foxx",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.0.1",
+  "description": "A foxx generator for Yeoman",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "arangodb",
+    "foxx",
+    "nosql"
   ],
   "homepage": "https://github.com/thomaskarlrichter/generator-foxx",
   "bugs": "https://github.com/thomaskarlrichter/generator-foxx/issues",
