@@ -52,8 +52,8 @@ FoxxGenerator.prototype.app = function app() {
   this.mkdir('files');
   this.mkdir('assets/javascript');
   this.mkdir('assets/css');
-  if(this.includeBootstrap !== undefined && this.includeBootstrap) this.copy('bootstrap.css','assets/css/bootstrap.css');
-  if(this.includeBackboneJS !== undefined && this.includeBackboneJS) this.copy('backbone.js','assets/javascript/backbone.js');
+  if(typeof this.includeBootstrap !== undefined && this.includeBootstrap) this.copy('bootstrap.css','assets/css/bootstrap.css');
+  if(typeof this.includeBackboneJS !== undefined && this.includeBackboneJS) this.copy('backbone.js','assets/javascript/backbone.js');
 
   this.copy('app.js', 'app.js');
   this.copy('setup.js', 'scripts/setup.js');
