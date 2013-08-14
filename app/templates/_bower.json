@@ -1,6 +1,15 @@
 {
-  "name": "package",
+  "name": "<%= foxxName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    <% if (includeBackboneJS) { %>
+      "underscore": "~1.4.3",
+      "backbone": "~1.0.0",
+    <% } %>
+    <% if (includeBootstrap) { %>
+      "bootstrap": ">=2.0.0",
+    <% } %>
+    "jquery": "~1.9.0"
+  }
 }
 

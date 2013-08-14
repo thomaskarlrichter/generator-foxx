@@ -23,22 +23,55 @@ FoxxGenerator.prototype.askFor = function askFor() {
   console.log('\n' + this.readFileAsString(path.join(__dirname, 'foxx.logo')).green);
   console.log('Welcome to Foxx Generator'.red + ' - ' + 'ladies and gentlemen!'.cyan);
 
-  var prompts = [{
-        type: 'confirm',
-        name: 'includeBootstrap',
-        message: 'Would you like to include Twitter Bootstrap?',
-        default: false
+  var prompts = [ {
+    name: 'foxxName',
+    message: 'What do you whant to call your foxx app?',
+    default: path.basename(process.cwd())
   }, {
-        type: 'confirm',
-        name: 'includeBackboneJS',
-        message: 'Would you like to include Backbonejs?',
-        default: false
-  },{
-        name: 'foxxName',
-        message: 'What do you whant to call your foxx app?'
+    name: 'description',
+    message: 'Description',
+    default: 'The best foxx app ever.'
+  }, {
+    name: 'homepage',
+    message: 'Homepage'
+  }, {
+    name: 'license',
+    message: 'License',
+    default: 'MIT'
+  }, {
+    name: 'githubUsername',
+    message: 'GitHub username'
+  }, {
+    name: 'authorName',
+    message: 'Author\'s Name'
+  }, {
+    name: 'authorEmail',
+    message: 'Author\'s Email'
+  }, {
+    name: 'authorUrl',
+    message: 'Author\'s Homepage'
+  }, {
+    type: 'confirm',
+    name: 'includeBootstrap',
+    message: 'Would you like to include Twitter Bootstrap?',
+    default: false
+  }, {
+    type: 'confirm',
+    name: 'includeBackboneJS',
+    message: 'Would you like to include Backbonejs?',
+    default: false
   }];
 
   this.prompt(prompts, function (props) {
+    this.slugname = this._.slugify(props.foxxName);
+
+    this.repoUrl = 'https://github.com/' + props.githubUsername + '/' + this.slugname;
+
+    if (!props.homepage) {
+        props.homepage = this.repoUrl;
+    }
+
+    this.props = props;
     this.foxxName = props.foxxName;
     this.includeBootstrap = props.includeBootstrap;
     this.includeBackboneJS = props.includeBackboneJS;
@@ -52,8 +85,14 @@ FoxxGenerator.prototype.app = function app() {
   this.mkdir('files');
   this.mkdir('assets/javascript');
   this.mkdir('assets/css');
-  if(typeof this.includeBootstrap !== undefined && this.includeBootstrap) this.copy('bootstrap.css','assets/css/bootstrap.css');
-  if(typeof this.includeBackboneJS !== undefined && this.includeBackboneJS) this.copy('backbone.js','assets/javascript/backbone.js');
+  this.copy('_bowerrc','.bowerrc');
+  this.copy('_style.css','assets/css/style.css');
+  this.copy('_bower.json','bower.json');
+  this.template('_index.html', 'assets/index.html');
+  //if(this.includeBootstrap) this.copy('bootstrap.css','assets/css/bootstrap.css');
+  //einfügen in index.html link und script tag
+  //if(this.includeBackboneJS) this.copy('backbone.js','assets/javascript/backbone.js');
+  //einfügen in index.html script tag
 
   this.copy('app.js', 'app.js');
   this.copy('setup.js', 'scripts/setup.js');

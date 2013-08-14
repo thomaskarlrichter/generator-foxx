@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<% if(includeBootstrap) { %>
+<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<% } %>
+<% if(includeBackboneJS) { %>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+<% } %>
+</head>
+<body>
+<div class="mystyle">hallo foxx</div>
+<% if(includeBackboneJS) { %>
+<p>with backbonejs</p>
+<% } %>
+<% if(includeBootstrap) { %>
+<a class="btn">bootstrap</a>
+<% } %>
+</body>
+</html>
