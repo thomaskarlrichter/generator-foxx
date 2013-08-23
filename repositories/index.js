@@ -13,5 +13,5 @@ var RepositoryGenerator = module.exports = function RepositoryGenerator(args, op
 util.inherits(RepositoryGenerator, yeoman.generators.NamedBase);
 
 RepositoryGenerator.prototype.files = function files() {
-  this.copy('repository.js', 'repository.js');
+  this.copy('repository.js', 'repositories/repository.js');
 };

@@ -98,6 +98,8 @@ FoxxGenerator.prototype.askFor = function askFor() {
 FoxxGenerator.prototype.app = function app() {
     this.mkdir('scripts');
     this.mkdir('files');
+    this.mkdir('models');
+    this.mkdir('repositories');
     this.mkdir('assets/javascript');
     this.mkdir('assets/css');
     this.copy('_bowerrc', '.bowerrc');
