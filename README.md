@@ -18,6 +18,8 @@ favorite web framework is). Inspired by frameworks like Sinatra Foxx is
 designed with simplicity and the specific use case of modern client-side
 MVC frameworks in mind.
 
+Read the [Foxx Documentation](http://www.arangodb.org/manuals/1.4/UserManualFoxx.html) for further information.
+
 
 
 ## License
