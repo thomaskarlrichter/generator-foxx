@@ -3,7 +3,7 @@
 /*global require, applicationContext*/
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A TODO DEscription Template
+/// @brief A TODO Description Template
 ///
 /// @file setup.js
 ///

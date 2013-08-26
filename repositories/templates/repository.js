@@ -2,7 +2,7 @@
 /*global require, exports */
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A
+/// @brief A Repository for <%= name %>es
 ///
 /// @file
 ///
@@ -17,13 +17,13 @@
 
   var _ = require("underscore"),
     Foxx = require("org/arangodb/foxx"),
-    Todos;
+    <%= name %>;
 
   Todos = Foxx.Repository.extend({
     // Create a new Todo in the collection
-    create: function (rawTodo) {
-      var todo = new this.modelPrototype(rawTodo);
-      return this.collection.save(todo.forDB());
+    create: function (raw<%= name %>) {
+      var <%= name %> = new this.modelPrototype(raw<%= name %>);
+      return this.collection.save(<%= name %>.forDB());
     },
 
     // Remove one object from the collection
@@ -33,20 +33,18 @@
 
     // Display all elements in the collection
     list: function () {
-      return _.map(this.collection.toArray(), function (rawTodo) {
-        var todo = new this.modelPrototype(rawTodo);
-        return todo.forClient();
+      return _.map(this.collection.toArray(), function (raw<%= name %>) {
+        var <%= name %> = new this.modelPrototype(raw<%= name %>);
+        return <%= name %>.forClient();
       }, this);
     },
 
     // Replace one document
     update: function (id, content) {
-      var todo = new this.modelPrototype(content);
+      var <%= name %> = new this.modelPrototype(content);
       return this.collection.replace(id, todo.forDB());
     }
   });
 
-  exports.Repository = Todos;
+  exports.Repository = <%= name %>;
 }());
-
-// This is a file copied by your subgenerator.

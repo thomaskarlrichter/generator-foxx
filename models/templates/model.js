@@ -2,7 +2,7 @@
 /*global require, exports */
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A
+/// @brief A <%= name %> model
 ///
 /// @file
 ///
@@ -15,13 +15,12 @@
 (function () {
   "use strict";
   var Foxx = require("org/arangodb/foxx"),
-    Todo;
+    <%= name %>;
 
   // Currently you could use the normal model, but for demo purposes
-  TODO = Foxx.Model.extend({
+  <%= name %> = Foxx.Model.extend({
   });
 
-  exports.Model = TODO;
+  exports.Model = <%= name %>;
 }());
 
-// This is a file copied by your subgenerator.
