@@ -41,7 +41,7 @@ Generates a neu model.
 
 Example:
 ```bash
-yo foxx:models modelname
+yo foxx:models customer
 ```
 ### Repositories
 Generates a new repository.
@@ -49,7 +49,7 @@ Generates a new repository.
 
 Example:
 ```bash
-yo foxx:repositories repositoryname
+yo foxx:repositories customerrep
 ```
 
 ## License
