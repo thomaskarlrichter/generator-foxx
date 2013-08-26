@@ -3,7 +3,7 @@
 /*global require, applicationContext*/
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A TODO Description Template
+/// @brief A script for seting up the foxx application
 ///
 /// @file setup.js
 ///
@@ -19,14 +19,8 @@
 (function() {
   "use strict";
   var console = require("console"),
-    db = require("org/arangodb").db,
-    TODO = applicationContext.collectionName("TODO");
-    // -->
+    db = require("org/arangodb").db;
+    // 1->
 
-  if (db._collection(TODO) === null) {
-    db._create(TODO);
-    //  -->
-  } else if (applicationContext.isProduction) {
-    console.warn("collection '%s' already exists. Leaving it untouched.", TODO);
-  }
+    // 2->
 }());

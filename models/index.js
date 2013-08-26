@@ -32,10 +32,25 @@ ModelGenerator.prototype.rewriteSetupJs = function () {
     fileEditUtils.rewriteFile({
 
         file: path.join('scripts', 'setup.js'),
-        needle: '->',
+        needle: '1->',
         splicable: [
-            '// something from ' + myname,
-            '// else'
+            'var ' + myname +  '= applicationContext.collectionName("' + myname + '");',
+            '// '
+        ]
+    });
+};
+
+ModelGenerator.prototype.rewriteSetupJs2 = function () {
+    fileEditUtils.rewriteFile({
+
+        file: path.join('scripts', 'setup.js'),
+        needle: '2->',
+        splicable: [
+            'if (db._collection(' + myname + ') === null) {',
+            '    db._create(' + myname + ');',
+            '} else if (applicationContext.isProduction) {',
+            '  console.warn("collection \'%s\' already exists. Leaving it untouched.", ' + myname + ');',
+            '}'
         ]
     });
 };
@@ -45,8 +60,11 @@ ModelGenerator.prototype.rewriteTeardownJs = function () {
         file: path.join('scripts', 'teardown.js'),
         needle: '->',
         splicable: [
-            '// something from ' + myname,
-            '// else'
+            'var ' + myname + ' = applicationContext.collectionName("' + myname + '")',
+            'collection = db._collection(' + myname + ');',
+            'if (collection !== null) {',
+            '  collection.drop();',
+            '}'
         ]
     });
 };

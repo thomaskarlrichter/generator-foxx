@@ -3,7 +3,7 @@
 /*global require, applicationContext*/
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A TODO DEscription Template
+/// @brief A teardown script for the foxx application
 ///
 /// @file teardown.js
 ///
@@ -17,13 +17,6 @@
 
 (function() {
   "use strict";
-  var db = require("org/arangodb").db,
-    TODO = applicationContext.collectionName("TODO"),
-    collection = db._collection(TODO);
+  var db = require("org/arangodb").db;
     // ->
-
-  if (collection !== null) {
-    collection.drop();
-    // -->
-  }
 }());
