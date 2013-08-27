@@ -2,7 +2,9 @@
     "name": "<%= foxxName %>",
     "version": "0.0.0",
     "description": "<%= description %>",
+    "author": "<%= authorName %>",
     "thumbnail": "images/thumbnail.png",
+    "copyright": "<%= license %>",
 
     "apps": {
         "/": "app.js"

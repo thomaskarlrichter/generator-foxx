@@ -4,12 +4,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief A Repository for <%= name %>es
 ///
-/// @file
+/// @file <%= name %>.js
 ///
 /// DISCLAIMER
 ///
-/// @author
-/// @author
+/// @author <%= manifest.author %>
+/// @copyright <%= manifest.copyright %>
 ////////////////////////////////////////////////////////////////////////////////
 
 (function () {
@@ -20,7 +20,7 @@
     <%= name %>;
 
   Todos = Foxx.Repository.extend({
-    // Create a new Todo in the collection
+    // Create a new <%= name %> object in the collection
     create: function (raw<%= name %>) {
       var <%= name %> = new this.modelPrototype(raw<%= name %>);
       return this.collection.save(<%= name %>.forDB());

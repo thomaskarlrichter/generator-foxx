@@ -1,17 +1,17 @@
 /*jslint indent: 2, nomen: true, maxlen: 100, white: true, plusplus: true, unparam: true */
-/*global todos*/
 /*global require, applicationContext*/
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A script for seting up the foxx application
+/// @brief A script for setting up the foxx application
 ///
 /// @file setup.js
 ///
 /// DISCLAIMER
 ///
-//
-/// @author TODO AUTHOR
-/// @author Copyright TODO COPY
+///
+///
+/// @author <%= manifest.author %>
+/// @author Copyright <%= manifest.copyright %>
 ////////////////////////////////////////////////////////////////////////////////
 
 

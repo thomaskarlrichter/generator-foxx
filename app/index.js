@@ -86,8 +86,10 @@ FoxxGenerator.prototype.askFor = function askFor() {
         this.foxxName = props.foxxName;
         this.description = props.description;
         this.homepage = props.homepage;
+        this.authorName = props.authorName;
         this.authorUrl = props.authorUrl;
         this.authorEmail = props.authorEmail;
+        this.license = props.license;
         this.includeBootstrap = props.includeBootstrap;
         this.includeBackboneJS = props.includeBackboneJS;
 
