@@ -2,6 +2,7 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
+var chalk = require("chalk");
 
 
 var FoxxGenerator = module.exports = function FoxxGenerator(args, options, config) {
@@ -20,8 +21,8 @@ FoxxGenerator.prototype.askFor = function askFor() {
     var cb = this.async();
 
     // have Foxx greet the user.
-    console.log('\n' + this.readFileAsString(path.join(__dirname, 'foxx.logo')).green);
-    console.log('Welcome to Foxx Generator'.red + ' - ' + 'ladies and gentlemen!'.cyan);
+    console.log(chalk.green('\n' + this.readFileAsString(path.join(__dirname, 'foxx.logo'))));
+    console.log('Welcome to Foxx Generator' + ' - ' + 'ladies and gentlemen!');
 
     var prompts = [
         {
