@@ -4,9 +4,9 @@
     'use strict';
     var util = require('util');
     var yeoman = require('yeoman-generator');
-    var manifest = require('../manifest.json');
+    //var manifest = require('./manifest.json');
 
-    var name = 'reository';
+    var name = 'repository';
 
     var RepositoryGenerator = module.exports = function RepositoryGenerator(args, options, config) {
         // By calling `NamedBase` here, we get the argument to the subgenerator call
