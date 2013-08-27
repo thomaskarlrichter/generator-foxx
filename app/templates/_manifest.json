@@ -3,6 +3,9 @@
     "version": "0.0.0",
     "description": "<%= description %>",
     "thumbnail": "images/thumbnail.png",
+    "author": "<%= authorName %>",
+    "email": "<%= authorEmail %>",
+    "license": "<%= license %>",
 
     "apps": {
         "/": "app.js"

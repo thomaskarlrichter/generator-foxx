@@ -10,8 +10,8 @@
 /// DISCLAIMER
 ///
 //
-/// @author TODO AUTHOR
-/// @author Copyright TODO COPY
+/// @author <%= authorName %>
+/// @license <%= license %>
 ////////////////////////////////////////////////////////////////////////////////
 
 

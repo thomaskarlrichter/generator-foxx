@@ -36,10 +36,6 @@ FoxxGenerator.prototype.askFor = function askFor() {
             default: 'The best foxx app ever.'
         },
         {
-            name: 'homepage',
-            message: 'Homepage'
-        },
-        {
             name: 'license',
             message: 'License',
             default: 'MIT'
@@ -55,10 +51,6 @@ FoxxGenerator.prototype.askFor = function askFor() {
         {
             name: 'authorEmail',
             message: 'Author\'s Email'
-        },
-        {
-            name: 'authorUrl',
-            message: 'Author\'s Homepage'
         },
         {
             type: 'confirm',
@@ -79,16 +71,13 @@ FoxxGenerator.prototype.askFor = function askFor() {
 
         this.repoUrl = 'https://github.com/' + props.githubUsername + '/' + this.slugname;
 
-        if (!props.homepage) {
-            props.homepage = this.repoUrl;
-        }
-
         this.props = props;
         this.foxxName = props.foxxName;
         this.description = props.description;
-        this.homepage = props.homepage;
-        this.authorUrl = props.authorUrl;
-        this.authorEmail = props.authorEmail;
+        this.githubUsername = props.githubUsername;
+        this.authorEmail= props.authorEmail;
+        this.authorName = props.authorName;
+        this.license = props.license;
         this.includeBootstrap = props.includeBootstrap;
         this.includeBackboneJS = props.includeBackboneJS;
 

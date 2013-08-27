@@ -3,15 +3,15 @@
 /*global require, applicationContext*/
 
 ////////////////////////////////////////////////////////////////////////////////
-/// @brief A script for seting up the foxx application
+/// @brief A script for setting up the foxx application
 ///
 /// @file setup.js
 ///
 /// DISCLAIMER
 ///
 //
-/// @author TODO AUTHOR
-/// @author Copyright TODO COPY
+/// @author <%= authorName %>
+/// @license <%= license %>
 ////////////////////////////////////////////////////////////////////////////////
 
 

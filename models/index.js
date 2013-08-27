@@ -4,9 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var yeoman = require('yeoman-generator');
 var fileEditUtils = require('../utils.js');
-var manifest = fs.readFileSync(path.join(process.cwd(),'manifest.json'));
-manifest = JSON.parse(manifest);
-console.log(manifest);
+var manifest;
 
 var ModelGenerator = module.exports = function ModelGenerator(args, options, config) {
   // By calling `NamedBase` here, we get the argument to the subgenerator call
@@ -14,7 +12,9 @@ var ModelGenerator = module.exports = function ModelGenerator(args, options, con
   yeoman.generators.NamedBase.apply(this, arguments);
 
   console.log('You called the model subgenerator with the argument ' + this.name + '.');
-    this.manifest = manifest;
+  manifest = fs.readFileSync(path.join(process.cwd(),'manifest.json'));
+  manifest = JSON.parse(manifest);
+  this.manifest = manifest;
 };
 
 
